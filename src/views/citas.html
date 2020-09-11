@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title%>
+    </title>
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/expedientes">Crear Expediente</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/citas">Crear Cita</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div style="width: 100%; align-items: center; margin-top: 10px;" class="d-flex flex-column justify-content-center">
+        <form style="width: 600px;" action="guardar-cita" method="POST" >
+            <div class="form-group">
+              <label for="exampleInputEmail1">Cédula del Paciente</label>
+              <input type="text" class="form-control" id="cedula" name="cedula" placeholder="Cédula">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Especialidad de la cita</label>
+                <input type="text" class="form-control" id="especialidad" name="especialidad" placeholder="Especialidad">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Fecha</label>
+                <input type="text" class="form-control" id="fecha" name="fecha" placeholder="Fecha">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Hora</label>
+                <input type="text" class="form-control" id="hora" name="hora" placeholder="Hora">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Motivo</label>
+                <input type="text" class="form-control" id="motivo" name="motivo" placeholder="Motivo">
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
